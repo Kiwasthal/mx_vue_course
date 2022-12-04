@@ -11,8 +11,11 @@ const app = Vue.createApp({
     calculateNum() {
       let randomNum = Math.floor(Math.random() * 10);
       this.number = randomNum;
-      this.randomImage = `https://picsum.photos/${randomNum}`;
+      this.updateImage(randomNum);
       return randomNum;
+    },
+    updateImage(number) {
+      this.randomImage = `https://picsum.photos/${number}`;
     },
   },
 });
